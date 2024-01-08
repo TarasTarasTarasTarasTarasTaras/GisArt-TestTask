@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.scrollable-grid {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 130px 0 10px 140px;
+}
+
+input {
+    width: 142px;
+    margin: 0 1px;
+}
+
+button,
+select {
+    margin-left: 20px;
+}

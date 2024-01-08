@@ -1,0 +1,12 @@
+UI/PassengerTimeTracker.SPA/node_modules/
+API/PassengerTimeTracker/PassengerTimeTracker.API/obj/
+API/PassengerTimeTracker/PassengerTimeTracker.API/bin/
+API/PassengerTimeTracker/PassengerTimeTracker.Business/obj/
+API/PassengerTimeTracker/PassengerTimeTracker.Business/bin/
+API/PassengerTimeTracker/PassengerTimeTracker.Data/obj/
+API/PassengerTimeTracker/PassengerTimeTracker.Data/bin/
+API/PassengerTimeTracker/PassengerTimeTracker.Entities/obj/
+API/PassengerTimeTracker/PassengerTimeTracker.Entities/bin/
+API/PassengerTimeTracker/PassengerTimeTracker.UnitTests/obj/
+API/PassengerTimeTracker/PassengerTimeTracker.UnitTests/bin/
+API/PassengerTimeTracker/.vs

@@ -1,0 +1,38 @@
+<div>
+  <div class="search-container">
+    <form #myForm="ngForm" (ngSubmit)="search()">
+      <kendo-textbox-container>
+        <input kendoTextBox name="id" placeholder="Enter ID" [(ngModel)]="formData.id" (input)="onlyNumbers($event)" />
+      </kendo-textbox-container>
+    
+      <kendo-textbox-container>
+        <input kendoTextBox name="driverId" placeholder="Enter Driver ID" [(ngModel)]="formData.driverId" (input)="onlyNumbers($event)" />
+      </kendo-textbox-container>
+    
+      <kendo-textbox-container>
+        <input kendoTextBox name="pickUp" placeholder="Enter Pickup Date" [(ngModel)]="formData.pickUp" />
+      </kendo-textbox-container>
+    
+      <kendo-textbox-container>
+        <input kendoTextBox name="dropOff" placeholder="Enter DropOff Date" [(ngModel)]="formData.dropOff" />
+      </kendo-textbox-container>
+
+      <select name="ordering" [(ngModel)]="formData.ordering">
+        <option *ngFor="let status of tripSortValues" [value]="status.value">{{ status.name }}</option>
+      </select>
+    
+      <button kendoButton type="submit">Search</button>
+    </form>
+  </div>  
+  
+  <div class="container">
+    <kendo-grid [data]="allTrips" class="scrollable-grid custom-grid">
+      <kendo-grid-column field="id" title="ID" [width]="150"></kendo-grid-column>
+      <kendo-grid-column field="driverId" title="Driver Id" [width]="150"></kendo-grid-column>
+      <kendo-grid-column field="pickUp" title="Pick Up" [width]="150"></kendo-grid-column>
+      <kendo-grid-column field="dropOff" title="Drop Off" [width]="150"></kendo-grid-column>
+    </kendo-grid>
+  </div>
+
+  <button kendoButton (click)="navigateToDrivers()">Navigate to Drivers</button>
+</div>

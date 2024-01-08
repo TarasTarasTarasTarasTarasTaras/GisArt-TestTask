@@ -1,0 +1,29 @@
+<div>
+    <div class="search-container">
+        <form #myForm="ngForm" (ngSubmit)="search()">
+            <kendo-textbox-container>
+                <input kendoTextBox name="driverId" placeholder="Enter Driver ID" [(ngModel)]="formData.driverId"
+                    (input)="onlyNumbers($event)" />
+            </kendo-textbox-container>
+
+            <button kendoButton type="submit">Search</button>
+        </form>
+
+        <select name="ordering" [(ngModel)]="sortValue">
+            <option *ngFor="let status of driverSortValues" [value]="status">{{ status }}</option>
+        </select>
+
+        <button kendoButton (click)="sort()">Sort</button>
+
+        <button kendoButton (click)="calculatePayableTime()">Calculate Payable Time</button>
+    </div>
+
+    <div class="container">
+        <kendo-grid [data]="allDrivers" class="scrollable-grid custom-grid">
+            <kendo-grid-column field="driverId" title="Driver Id" [width]="150"></kendo-grid-column>
+            <kendo-grid-column field="payableTime" title="Payable Time" [width]="150"></kendo-grid-column>
+        </kendo-grid>
+    </div>
+
+    <button kendoButton (click)="navigateToTrips()">Navigate to Trips</button>
+</div>
